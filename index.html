@@ -32,19 +32,22 @@
     }
     header { margin-bottom: 54px; text-align: center; }
     .monogram {
-      display: grid;
       width: 106px;
       height: 106px;
       margin: 0 auto 28px;
-      place-items: center;
       border: 1px solid rgba(180,151,79,.45);
       border-radius: 50%;
       outline: 1px solid rgba(180,151,79,.2);
       outline-offset: 5px;
       background: var(--paper);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 34px;
-      letter-spacing: .08em;
+      overflow: hidden;
+    }
+    .monogram img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 24%;
     }
     h1 {
       margin: 0 0 10px;
@@ -143,7 +146,9 @@
 <body>
   <main>
     <header>
-      <div class="monogram" aria-hidden="true">JD</div>
+      <div class="monogram">
+        <img src="joanne-hero-portrait.png" alt="Joanne Dormon">
+      </div>
       <h1>Joanne Dormon</h1>
       <p class="strapline">VVIP aviation-trained · multilingual · luxury hospitality</p>
       <div class="accent"></div>
